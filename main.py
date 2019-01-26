@@ -46,4 +46,5 @@ conn.close()
 # ignore the oldest day (because it may be wrong)
 dates = sorted(list(daily_entry_count.keys()), reverse=True)[:-1]
 for d in dates:
-    print(d.isoformat(), daily_entry_count[d], daily_char_count[d])
+    print(d.isoformat(), daily_char_count[d])
+    # print(d.isoformat(), daily_entry_count[d], daily_char_count[d])
