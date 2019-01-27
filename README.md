@@ -19,3 +19,9 @@ You can use [termgraph](https://github.com/mkaz/termgraph) to visualize the stat
 ```
 python3 main.py | head -30 | termgraph --format "{:.0f}"
 ```
+
+Visualize entries per day:
+
+```
+python3 main.py --daily-entry --count 50 | termgraph --format "{:.0f}"
+```
