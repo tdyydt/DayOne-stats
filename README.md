@@ -14,6 +14,8 @@ Please note that this project is still under development.
 python3 main.py
 ```
 
+Add `-h` or `--help` to show the explanation about arguments.
+
 You can use [termgraph](https://github.com/mkaz/termgraph) to visualize the statistics.
 
 ```

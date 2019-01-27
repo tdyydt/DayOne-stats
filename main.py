@@ -24,11 +24,11 @@ parser.add_argument(
 parser.add_argument(
     '--count',
     type=int,
-    help="set the number of entries to be processed"
+    help=f"set the number of entries to be processed; defalut: {COUNT}"
     )
 parser.add_argument(
     '--db-path',
-    help="set the location of DayOne.sqlite",
+    help=f"set the location of DayOne.sqlite; default: {DB_PATH}",
     )
 args = parser.parse_args()
 
