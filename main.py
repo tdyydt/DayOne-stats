@@ -9,7 +9,7 @@ DB_PATH = Path('~/Library/Group Containers/5U8NS4GX82.dayoneapp2/Data/Documents/
 # The number of entries (from the latest one) to be processed.
 COUNT = 200
 
-# -- command-line arguments
+# -- Command-line arguments
 parser = argparse.ArgumentParser()
 parser.add_argument(
     '--daily-char',
@@ -21,11 +21,24 @@ parser.add_argument(
     action='store_true',
     help='show the number of entries in a day',
     )
+parser.add_argument(
+    '--count',
+    type=int,
+    help="set the number of entries to be processed"
+    )
+parser.add_argument(
+    '--db-path',
+    help="set the location of DayOne.sqlite",
+    )
 args = parser.parse_args()
 
-# If no options were specified, ...
+# Show daily_char, if no options were specified.
 if not args.daily_entry and not args.daily_char:
     args.daily_char = True
+
+# Change the default behavior.
+if args.count: COUNT = args.count
+if args.db_path: DB_PATH = Path(args.db_path).expanduser()
 
 # ---
 class Entry:
